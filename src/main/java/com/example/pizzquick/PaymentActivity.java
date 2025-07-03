@@ -31,6 +31,21 @@ public class PaymentActivity extends AppCompatActivity {
         EditText cvvInput = findViewById(R.id.cvv_input);
         Button payButton = findViewById(R.id.pay_button);
 
+            expiryInput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() == 2 && before == 0) {
+                    expiryInput.setText(s + "/");
+                    expiryInput.setSelection(3);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
 
         payButton.setOnClickListener(v -> {
             String cardNumber = cardNumberInput.getText().toString().trim();
@@ -44,6 +59,11 @@ public class PaymentActivity extends AppCompatActivity {
 
             if (cardNumber.length() != 16) {
                 Toast.makeText(this, "Номер карты должен содержать 16 цифр", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+              if (!expiry.matches("(0[1-9]|1[0-2])/[0-9]{2}")) {
+                Toast.makeText(this, "Введите срок в формате MM/YY", Toast.LENGTH_SHORT).show();
                 return;
             }
 
