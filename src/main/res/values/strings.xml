@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PizzQuick</string>
+    <string-array name="order_statuses">
+        <item>Все</item>
+        <item>Ожидает</item>
+        <item>В обработке</item>
+        <item>Завершен</item>
+        <item>Отменен</item>
+    </string-array>
+</resources>

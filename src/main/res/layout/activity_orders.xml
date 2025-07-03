@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/orders_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Мои заказы"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orders_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/orders_title"
+        android:layout_marginTop="16dp"
+        android:background="#80FFFFFF"
+        android:padding="8dp"/>
+
+    <Button
+        android:id="@+id/btn_back_to_orders"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:layout_alignTop="@id/orders_title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/btn_orange_selector"
+        android:text="Назад"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:padding="4dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background"
+    android:padding="24dp">
+
+
+    <ImageView
+        android:id="@+id/dialog_pizza_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop" />
+
+
+    <TextView
+        android:id="@+id/dialog_pizza_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:gravity="center"/>
+
+
+    <TextView
+        android:id="@+id/dialog_pizza_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textColor="#FF5722"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+
+    <TextView
+        android:id="@+id/dialog_pizza_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:textColor="#757575"
+        android:lineSpacingExtra="4dp"/>
+
+
+    <Button
+        android:id="@+id/dialog_add_to_cart_btn"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_orange_selector"
+        android:text="Добавить в корзину"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:elevation="2dp"/>
+
+
+    <Button
+        android:id="@+id/dialog_close_btn"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_orange_selector"
+        android:text="Закрыть"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:elevation="2dp"/>
+</LinearLayout>
